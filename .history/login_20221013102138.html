@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* /* body {
+            background-color: #343a40;
+        } */
+        
+        form {
+            margin: 150px auto;
+            width: 700px;
+            height: 350px;
+            color: white;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .title {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        input {
+            width: 400px;
+            height: 40px;
+            padding-left: 5px;
+            border-radius: 5px;
+            color: white;
+        }
+        
+        button {
+            width: 100px;
+            height: 30px;
+            margin-bottom: 20px;
+        }
+        
+        form a {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .error {
+            font-size: 14px;
+            color: red;
+            height: 20px;
+        }
+        
+        */ * {
+            margin: 0 auto;
+        }
+        
+        body {
+            background-color: #343a40;
+        }
+        
+        .container {
+            position: relative;
+            top: 100px;
+        }
+        
+        .news-nav {
+            clear: both;
+            height: 80px;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 300px;
+            margin: 0 auto;
+        }
+        
+        .news-nav li {
+            float: left;
+            list-style-type: none;
+            margin: 0 10px;
+            font-size: 30px;
+            display: block;
+            width: 86px;
+            height: 79px;
+            text-align: center;
+            line-height: 79px;
+            font-weight: bold;
+            color: #007bff;
+            cursor: pointer;
+        }
+        
+        .news-nav li.on {
+            color: #74dcff;
+            border-bottom-color: #74dcff;
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+        }
+        
+        #index-news-list-2 {
+            display: none;
+        }
+        
+        .modal-dialog {
+            max-width: 100% !important;
+        }
+        
+        .modal-content {
+            background: rgba(0, 0, 0, 0.3);
+            width: 700px;
+        }
+        
+        .loginForm {
+            width: 400px;
+        }
+        
+        .loginForm .form-group {
+            margin: 30px 0;
+        }
+        
+        .loginForm .form-group .form-control {
+            height: 40px;
+            font-size: 15px;
+        }
+        
+        input[type="checkbox"] {
+            position: relative;
+            top: -2px;
+            vertical-align: middle;
+            cursor: pointer;
+            zoom: 1.6;
+        }
+        
+        input[type="radio"] {
+            position: relative;
+            top: -3px;
+            vertical-align: middle;
+            cursor: pointer;
+            zoom: 1.6;
+        }
+        
+        .btn-primary {
+            background-color: #3e4963;
+            border: 0px solid transparent;
+            width: 400px;
+            height: 50px;
+            font-size: 24px;
+            font-family: STKaiti;
+        }
+        
+        label {
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <form>
+        <div class="title">登录</div>
+        <input type="text" class="username" placeholder="Username">
+        <div class="error"></div>
+        <input type="password" class="password" placeholder="Password">
+        <div class="error"></div>
+        <button class="login-btn">Login</button>
+    </form> -->
+    <div class="modal-title">
+        <ul class="news-nav js-nav-title">
+            <li class="on" data="login">登录</li>
+            <!-- <li class="" data="register">注册</li> -->
+        </ul>
+    </div>
+    <div class="modal-body index-news-list" id="index-news-list-1">
+        <form class="loginForm" id="loginForm" action="" method="post">
+            <div class="form-group">
+                <input class="form-control required" name="name" id="name" type="text" placeholder="请输入用户名或邮箱">
+            </div>
+            <div class="form-group">
+                <input class="form-control required" name="password" id="password" type="password" placeholder="请输入密码">
+            </div>
+            <!-- <div class="form-group">
+                <label for="remember">
+                    <input type="checkbox" name="remember" id="remember" value="0"/> 记住我
+                  </label>
+            </div> -->
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">登录</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

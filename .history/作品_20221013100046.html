@@ -1,0 +1,144 @@
+<html>
+
+<head>
+    <title>登录</title>
+    <meta name="decorator" content="default" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        * {
+            margin: 0 auto;
+        }
+        
+        body {
+            background-color: #343a40;
+        }
+        
+        .container {
+            position: relative;
+            top: 100px;
+        }
+        
+        .news-nav {
+            clear: both;
+            height: 80px;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 300px;
+            margin: 0 auto;
+        }
+        
+        .news-nav li {
+            float: left;
+            list-style-type: none;
+            margin: 0 10px;
+            font-size: 30px;
+            display: block;
+            width: 86px;
+            height: 79px;
+            text-align: center;
+            line-height: 79px;
+            font-weight: bold;
+            color: #007bff;
+            cursor: pointer;
+        }
+        
+        .news-nav li.on {
+            color: #74dcff;
+            border-bottom-color: #74dcff;
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+        }
+        
+        #index-news-list-2 {
+            display: none;
+        }
+        
+        .modal-dialog {
+            max-width: 100% !important;
+        }
+        
+        .modal-content {
+            background: rgba(0, 0, 0, 0.3);
+            width: 700px;
+        }
+        
+        .loginForm {
+            width: 400px;
+        }
+        
+        .loginForm .form-group {
+            margin: 30px 0;
+        }
+        
+        .loginForm .form-group .form-control {
+            height: 40px;
+            font-size: 15px;
+        }
+        
+        input[type="checkbox"] {
+            position: relative;
+            top: -2px;
+            vertical-align: middle;
+            cursor: pointer;
+            zoom: 1.6;
+        }
+        
+        input[type="radio"] {
+            position: relative;
+            top: -3px;
+            vertical-align: middle;
+            cursor: pointer;
+            zoom: 1.6;
+        }
+        
+        .btn-primary {
+            background-color: #3e4963;
+            border: 0px solid transparent;
+            width: 400px;
+            height: 50px;
+            font-size: 24px;
+            font-family: STKaiti;
+        }
+        
+        label {
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <!--表单名称-->
+        <div class="title">Register Now</div>
+        <!--用户名-->
+        <input class="username" placeholder="User name" v-model="username" />
+        <!--错误提示，下同-->
+        <div class="error">{{uError}}</div>
+        <!--密码-->
+        <input class="password" placeholder="Password" v-model="userpwd" />
+        <div class="error">{{pError}}</div>
+        <!--确认密码-->
+        <input class="pwdagain" placeholder="Confirm Password" v-model="pwdagain" />
+        <div class="error">{{aError}}</div>
+        <!--注册按钮-->
+        <button class="register-btn" @click="userRegister">Register</button>
+        <!--这里我们用路由跳转到登陆组件-->
+        <router-link to="/Login">已有账号，登陆</router-link>
+    </form>
+    <script>
+        $(document).ready(function() {
+            $(".js-nav-title li").click(function() {
+                $(this).attr("class", "on");
+                $(this).siblings().attr("class", "");
+                var index = $(".js-nav-title li").index(this);
+                $(".index-news-list").css("display", "none");
+                $("#index-news-list-" + (index + 1)).css("display", "block");
+            });
+        });
+    </script>
+</body>
+
+</html>

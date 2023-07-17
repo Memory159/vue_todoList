@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #343a40;
+        }
+        
+        form {
+            margin: 160px auto;
+            width: 700px;
+            height: 400px;
+            background-color: #24282D;
+            box-shadow: 5px 5px 5px 5px #24282D;
+        }
+        
+        .title {
+            color: #74dcff;
+            font-size: 30px;
+            font-weight: 800;
+            text-align: center;
+            padding-top: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .username {
+            width: 400px;
+            height: 40px;
+            margin: 15px 150px;
+            font-size: 15px;
+            border: 0;
+            outline: none;
+            border-radius: 5px;
+            padding-left: 15px;
+        }
+        
+        .password {
+            width: 400px;
+            height: 40px;
+            margin: 15px 150px;
+            font-size: 15px;
+            border: 0;
+            outline: none;
+            border-radius: 5px;
+            /* letter-spacing: 10px; */
+            padding-left: 15px;
+        }
+        
+        .login-btn {
+            width: 400px;
+            height: 60px;
+            background-color: #3e4963;
+            margin: 50px 0px 0px 150px;
+            border-radius: 1%;
+            font-size: 25px;
+            color: #fff;
+            border-radius: 5px;
+            border: 0;
+        }
+        
+        .register {
+            color: #fff;
+            margin: 20px 0px 0px 410px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="title">登录</div>
+        <input type="text" class="username" placeholder="Username">
+        <div class="error"></div>
+        <input type="password" class="password" placeholder="Password">
+        <div class="error"></div>
+        <button class="login-btn">登录</button>
+        <div> <a href="#" class="register">没有账号？点击注册</a></div>
+    </form>
+</body>
+
+</html>
